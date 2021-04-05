@@ -1,0 +1,26 @@
+
+<mat-card>
+  <mat-card-title>Alterar dados do Funcionario</mat-card-title>
+      <form>
+          <mat-form-field>
+              <input matInput placeholder="Nome"
+                  [(ngModel)]="funcionario.nome" name ="nome">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="CPF"
+                [(ngModel)]="funcionario.cpf" name ="cpf">
+        </mat-form-field>
+          <mat-form-field>
+              <input matInput placeholder="Salario (R$)"
+                  [(ngModel)]="funcionario.salario" name="salario">
+          </mat-form-field>
+      </form>
+
+  <button mat-raised-button (click) = "updateFuncionario()" color="primary" >
+    Salvar
+  </button>
+
+  <button mat-raised-button (click) = "cancel()" color="primary" >
+    Cancelar
+  </button>
+  </mat-card>
